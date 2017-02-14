@@ -8,6 +8,9 @@ var index = require('./routes/index');
 var reviews = require('./routes/reviews');
 
 var app = express();
+// Apply Cors
+var cors = require('cors');
+app.use(cors());
 
 // Views
 app.set('views', path.join(__dirname, 'views'));
@@ -47,8 +50,8 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.listen(3000, function(){
-    console.log("Server Running Todos on 3000");
+app.listen(process.env.port || 5000, function(){
+    console.log("Server Running Review API on " + (process.env.port || 5000));
 })
 
 
