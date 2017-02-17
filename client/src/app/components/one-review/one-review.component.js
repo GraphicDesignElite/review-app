@@ -10,26 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var reviews_service_1 = require('../../services/reviews.service');
-var AllReviewsComponent = (function () {
-    function AllReviewsComponent(_reviewService) {
+var router_1 = require('@angular/router');
+var OneReviewComponent = (function () {
+    function OneReviewComponent(_reviewService, _route) {
         this._reviewService = _reviewService;
+        this._route = _route;
     }
-    AllReviewsComponent.prototype.ngOnInit = function () {
+    OneReviewComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this._reviewService.getAllReviews().subscribe(function (res) {
-            _this.allReviews = res;
-            console.log(_this.allReviews);
+        this._route.params.map(function (params) { return params['id']; }).subscribe(function (id) {
+            _this._reviewService.getOneReview(id).subscribe(function (review) {
+                _this.review = review;
+                console.log(review);
+            });
         });
     };
-    AllReviewsComponent = __decorate([
+    OneReviewComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'all-reviews',
-            templateUrl: 'all-reviews.component.html'
+            selector: 'one-review',
+            templateUrl: 'one-review.component.html'
         }), 
-        __metadata('design:paramtypes', [reviews_service_1.ReviewsService])
-    ], AllReviewsComponent);
-    return AllReviewsComponent;
+        __metadata('design:paramtypes', [reviews_service_1.ReviewsService, router_1.ActivatedRoute])
+    ], OneReviewComponent);
+    return OneReviewComponent;
 }());
-exports.AllReviewsComponent = AllReviewsComponent;
-//# sourceMappingURL=all-reviews.component.js.map
+exports.OneReviewComponent = OneReviewComponent;
+//# sourceMappingURL=one-review.component.js.map

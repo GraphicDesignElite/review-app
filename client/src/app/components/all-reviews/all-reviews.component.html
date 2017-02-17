@@ -1,1 +1,46 @@
-<h1>All Reviews</h1>
+<div class="jumbotron">
+    <h1 class="display-3">Review Service</h1>
+    <p class="lead">Built with Angular, Node.js, Google Places, and Bootstrap 4</p>
+    <hr class="my-4">
+    <form>
+        <div class="form-group">
+            <label for="searchLabel">Search For a Company</label>
+            <input type="text" class="form-control" id="search-bar-large" aria-describedby="searchLabel" placeholder="Search For a Company">
+        </div>
+        
+    </form>
+</div>
+<div class="allreviews-component" *ngIf="allReviews">
+    <div class="row">
+        <div class="col-md-12 page-title">
+            <h1>Recent Reviews</h1>
+        </div>
+    </div>
+    <div class="row">
+        <ng-container *ngFor="let review of allReviews">
+            <div class="review-display-panel col-md-6">
+               <div class="card">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col">
+                            x
+                        </div>       
+                        <div class="col-10">
+                            <h3 class="card-title"><a href="/review/{{review._id}}">{{review.review_title}}</a></h3>
+                            <div class="review-score">
+                                <span class="review-author"><a href="/users/{{review.review_author_id}}">{{review.review_author}}</a></span> wrote a review about <a href="/company/{{review.company_reviewed}}">{{review.company_reviewed_name}}</a>
+                            </div>    
+                            <div class="review-rating">
+                                <rating-display rating="{{review.rating}}"></rating-display>
+                            </div>
+                            <div class="review-published">
+                                {{review.published_date}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

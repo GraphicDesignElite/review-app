@@ -8,20 +8,12 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
 @Injectable()
-export class ReviewsService{
-    private apiHost: string = 'http://localhost:5000/api/v1/';
+export class GoogleService{
+    private apiHost: string = 'http://localhost:5000/api/google/';
     
     constructor(private _http : Http, private _activatedRoute:ActivatedRoute, private _router: Router ){ 
-        console.log('Review Services Are Ready');
+        console.log('Google Services Are Ready');
     }
-    getAllReviews(){
-        console.log('Getting All Reviews');
-        return this._http.get(this.apiHost + 'reviews')
-        .map(res=>res.json());
-    }
-    getOneReview(id:string){
-        return this._http.get(this.apiHost + 'review/' + id)
-        .map(res=>res.json());
-    }
+   
 
 }

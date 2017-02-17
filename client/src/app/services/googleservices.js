@@ -13,28 +13,19 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 require('rxjs/add/operator/map');
 require('rxjs/add/operator/mergeMap');
-var ReviewsService = (function () {
-    function ReviewsService(_http, _activatedRoute, _router) {
+var GoogleService = (function () {
+    function GoogleService(_http, _activatedRoute, _router) {
         this._http = _http;
         this._activatedRoute = _activatedRoute;
         this._router = _router;
-        this.apiHost = 'http://localhost:5000/api/v1/';
-        console.log('Review Services Are Ready');
+        this.apiHost = 'http://localhost:5000/api/google/';
+        console.log('Google Services Are Ready');
     }
-    ReviewsService.prototype.getAllReviews = function () {
-        console.log('Getting All Reviews');
-        return this._http.get(this.apiHost + 'reviews')
-            .map(function (res) { return res.json(); });
-    };
-    ReviewsService.prototype.getOneReview = function (id) {
-        return this._http.get(this.apiHost + 'review/' + id)
-            .map(function (res) { return res.json(); });
-    };
-    ReviewsService = __decorate([
+    GoogleService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http, router_1.ActivatedRoute, router_1.Router])
-    ], ReviewsService);
-    return ReviewsService;
+    ], GoogleService);
+    return GoogleService;
 }());
-exports.ReviewsService = ReviewsService;
-//# sourceMappingURL=reviews.service.js.map
+exports.GoogleService = GoogleService;
+//# sourceMappingURL=googleservices.js.map

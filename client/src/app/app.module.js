@@ -12,18 +12,28 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var forms_1 = require('@angular/forms');
-var navbar_component_1 = require('./components/navbar/navbar.component');
+var app_routing_1 = require('./app.routing');
 var reviews_service_1 = require('./services/reviews.service');
 var app_component_1 = require('./app.component');
+var navbar_component_1 = require('./components/navbar/navbar.component');
+var about_component_1 = require('./components/about/about.component');
 var all_reviews_component_1 = require('./components/all-reviews/all-reviews.component');
-var app_routing_1 = require('./app.routing');
+var one_review_component_1 = require('./components/one-review/one-review.component');
+var rating_display_component_1 = require('./components/rating-display/rating-display.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, app_routing_1.routing],
-            declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent, all_reviews_component_1.AllReviewsComponent],
+            declarations: [
+                app_component_1.AppComponent,
+                about_component_1.AboutComponent,
+                navbar_component_1.NavbarComponent,
+                all_reviews_component_1.AllReviewsComponent,
+                one_review_component_1.OneReviewComponent,
+                rating_display_component_1.RatingDisplayComponent
+            ],
             bootstrap: [app_component_1.AppComponent],
             providers: [reviews_service_1.ReviewsService]
         }), 
