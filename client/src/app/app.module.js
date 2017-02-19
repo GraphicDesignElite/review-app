@@ -14,12 +14,14 @@ var http_1 = require('@angular/http');
 var forms_1 = require('@angular/forms');
 var app_routing_1 = require('./app.routing');
 var reviews_service_1 = require('./services/reviews.service');
+var google_service_1 = require('./services/google.service');
 var app_component_1 = require('./app.component');
 var navbar_component_1 = require('./components/navbar/navbar.component');
 var about_component_1 = require('./components/about/about.component');
 var all_reviews_component_1 = require('./components/all-reviews/all-reviews.component');
 var one_review_component_1 = require('./components/one-review/one-review.component');
 var rating_display_component_1 = require('./components/rating-display/rating-display.component');
+var search_bar_component_1 = require('./components/search-bar/search-bar.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,10 +34,11 @@ var AppModule = (function () {
                 navbar_component_1.NavbarComponent,
                 all_reviews_component_1.AllReviewsComponent,
                 one_review_component_1.OneReviewComponent,
-                rating_display_component_1.RatingDisplayComponent
+                rating_display_component_1.RatingDisplayComponent,
+                search_bar_component_1.SearchBarComponent
             ],
             bootstrap: [app_component_1.AppComponent],
-            providers: [reviews_service_1.ReviewsService]
+            providers: [reviews_service_1.ReviewsService, google_service_1.GoogleService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

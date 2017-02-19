@@ -21,6 +21,10 @@ var GoogleService = (function () {
         this.apiHost = 'http://localhost:5000/api/google/';
         console.log('Google Services Are Ready');
     }
+    GoogleService.prototype.getPlaceByName = function (name) {
+        return this._http.get(this.apiHost + 'places/search/' + name)
+            .map(function (res) { return res.json(); });
+    };
     GoogleService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http, router_1.ActivatedRoute, router_1.Router])
@@ -28,4 +32,4 @@ var GoogleService = (function () {
     return GoogleService;
 }());
 exports.GoogleService = GoogleService;
-//# sourceMappingURL=googleservices.js.map
+//# sourceMappingURL=google.service.js.map

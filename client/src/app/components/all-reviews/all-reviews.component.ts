@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ReviewsService } from '../../services/reviews.service';
 import { RatingDisplayComponent } from '../../components/rating-display/rating-display.component';
+import { SearchBarComponent }  from '../../components/search-bar/search-bar.component';
 
 @Component({
     moduleId: module.id,
@@ -15,7 +16,6 @@ export class AllReviewsComponent implements OnInit{
     ngOnInit(){
         this._reviewService.getAllReviews().subscribe(res=>{
                 this.allReviews = res;
-                console.log(this.allReviews)
         });
     }
 }

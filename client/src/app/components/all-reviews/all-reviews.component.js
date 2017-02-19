@@ -18,7 +18,6 @@ var AllReviewsComponent = (function () {
         var _this = this;
         this._reviewService.getAllReviews().subscribe(function (res) {
             _this.allReviews = res;
-            console.log(_this.allReviews);
         });
     };
     AllReviewsComponent = __decorate([

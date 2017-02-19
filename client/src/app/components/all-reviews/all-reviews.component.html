@@ -1,14 +1,7 @@
 <div class="jumbotron">
     <h1 class="display-3">Review Service</h1>
     <p class="lead">Built with Angular, Node.js, Google Places, and Bootstrap 4</p>
-    <hr class="my-4">
-    <form>
-        <div class="form-group">
-            <label for="searchLabel">Search For a Company</label>
-            <input type="text" class="form-control" id="search-bar-large" aria-describedby="searchLabel" placeholder="Search For a Company">
-        </div>
-        
-    </form>
+    <search-bar></search-bar>
 </div>
 <div class="allreviews-component" *ngIf="allReviews">
     <div class="row">

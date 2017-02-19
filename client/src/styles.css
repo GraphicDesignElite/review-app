@@ -2,8 +2,13 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 200%;
 }
+/*Components*/
 .application-panel{
   padding-top:30px;
 }
+.search-bar-large{
+  
+}
+
 /*Utilities*/
 .deflate{font-size:.8em; opacity:.7;}

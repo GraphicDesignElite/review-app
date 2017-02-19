@@ -14,6 +14,9 @@ export class GoogleService{
     constructor(private _http : Http, private _activatedRoute:ActivatedRoute, private _router: Router ){ 
         console.log('Google Services Are Ready');
     }
-   
-
+    getPlaceByName(name:string){
+        return this._http.get(this.apiHost + 'places/search/' + name)
+        .map(res=>res.json());
+    }
+    
 }
