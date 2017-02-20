@@ -8,19 +8,16 @@ import { GoogleService } from '../../services/google.service';
     templateUrl: 'search-bar.component.html'
 })
 export class SearchBarComponent{
-    searching:boolean = false;
-    searchQuery:string = " ";
+    
+    searchQuery:string;
     searchResults:any[];
 
-    constructor( private _googleservice: GoogleService ){}
-    
+    constructor( private _googleservice: GoogleService ){}  
 
     search(){
-        this.searching = true;
         this._googleservice.getPlaceByName(this.searchQuery).subscribe(searchResults =>{
             this.searchResults = searchResults;
             console.log(this.searchResults);
         });
-        this.searching = false;
     }
 }

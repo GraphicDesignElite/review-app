@@ -18,6 +18,8 @@ var google_service_1 = require('./services/google.service');
 var app_component_1 = require('./app.component');
 var navbar_component_1 = require('./components/navbar/navbar.component');
 var about_component_1 = require('./components/about/about.component');
+var home_page_component_1 = require('./components/home-page/home-page.component');
+var search_results_component_1 = require('./components/search-results/search-results.component');
 var all_reviews_component_1 = require('./components/all-reviews/all-reviews.component');
 var one_review_component_1 = require('./components/one-review/one-review.component');
 var rating_display_component_1 = require('./components/rating-display/rating-display.component');
@@ -31,6 +33,8 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 about_component_1.AboutComponent,
+                home_page_component_1.HomePageComponent,
+                search_results_component_1.SearchResultsComponent,
                 navbar_component_1.NavbarComponent,
                 all_reviews_component_1.AllReviewsComponent,
                 one_review_component_1.OneReviewComponent,

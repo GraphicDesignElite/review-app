@@ -11,6 +11,11 @@ import { GoogleService } from './services/google.service';
 import { AppComponent }  from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
+import { HomePageComponent }  from './components/home-page/home-page.component';
+import { SearchResultsComponent }  from './components/search-results/search-results.component';
+
+
+
 import { AllReviewsComponent }  from './components/all-reviews/all-reviews.component';
 import { OneReviewComponent }  from './components/one-review/one-review.component';
 
@@ -22,6 +27,8 @@ import { SearchBarComponent }  from './components/search-bar/search-bar.componen
   declarations: [ 
                   AppComponent,
                   AboutComponent,
+                  HomePageComponent,
+                  SearchResultsComponent,
                   NavbarComponent,
                   AllReviewsComponent,
                   OneReviewComponent,

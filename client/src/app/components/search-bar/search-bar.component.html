@@ -1,6 +1,6 @@
-<form novalidate>
+<form method="get" action="/search-results/" ngNoForm>
     <div class="form-group">
-        <input type="text" class="form-control" id="search-bar-large" aria-describedby="searchLabel" placeholder="Search For a Company" name="searchQuery" [(ngModel)]="searchQuery">
-        <button (click)="search('mycorporation.com')">Search</button>
+        <input type="text" class="form-control" id="search-bar-large" aria-describedby="searchLabel" placeholder="Search For a Company" name="search" [(ngModel)]="searchQuery">
+        <input type="submit" value="Submit">
     </div>
 </form>
