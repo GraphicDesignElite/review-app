@@ -18,7 +18,7 @@ export class OneReviewComponent implements OnInit{
             this._reviewService.getOneReview(id).subscribe(review =>{
                     this.review = review; 
                     console.log(review); 
-            });  
+            });
         });
         
     }

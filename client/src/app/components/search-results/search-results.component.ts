@@ -9,7 +9,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
     templateUrl: 'search-results.component.html'
 })
 export class SearchResultsComponent implements OnInit{
-    searchResults:any[];
+    searchResults:any;
 
     constructor( private _googleservice: GoogleService, private _route: ActivatedRoute  ){}
 
@@ -17,9 +17,7 @@ export class SearchResultsComponent implements OnInit{
        this._route.queryParams.subscribe(data => {
             let searchTerms = this.cleanInput(data['search']);
             this._googleservice.getPlaceByName(searchTerms).subscribe(searchResults =>{
-            this.searchResults = searchResults;
-            
-            console.log("Searched: " + searchTerms);
+            this.searchResults = JSON.parse(searchResults);
             console.log(this.searchResults);
             });
        });
