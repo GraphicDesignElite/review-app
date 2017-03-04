@@ -15,7 +15,8 @@ export class GoogleService{
         console.log('Google Services Are Ready');
     }
     getPlaceByName(name:string){
-        return this._http.get(this.apiHost + 'places/search/' + name).map(res=>res.json());
+        return this._http.get(this.apiHost + 'places/search/' + name)
+        .map(res=>res.json());
     }
     
 }
