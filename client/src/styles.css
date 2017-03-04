@@ -6,8 +6,8 @@ h1 {
 .application-panel{
   padding-top:30px;
 }
-.search-bar-large{
-  
+.tag{
+  font-size:11px; display:inline-block; padding:3px 5px; background:#efefef; margin-right:5px;
 }
 
 /*Utilities*/

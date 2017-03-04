@@ -21,9 +21,9 @@ var SearchResultsComponent = (function () {
         this._route.queryParams.subscribe(function (data) {
             var searchTerms = _this.cleanInput(data['search']);
             _this._googleservice.getPlaceByName(searchTerms).subscribe(function (searchResults) {
-                _this.searchResults = JSON.parse(searchResults);
-                console.log("Searched: " + searchTerms);
-                console.log(_this.searchResults);
+                _this.searchResults = JSON.parse(searchResults); // parse results
+                _this.searchResults = _this.searchResults.results; // clean results
+                console.log(_this.searchResults); // remove
             });
         });
     };

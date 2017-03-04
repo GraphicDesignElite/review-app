@@ -22,7 +22,12 @@ var GoogleService = (function () {
         console.log('Google Services Are Ready');
     }
     GoogleService.prototype.getPlaceByName = function (name) {
-        return this._http.get(this.apiHost + 'places/search/' + name).map(function (res) { return res.json(); });
+        return this._http.get(this.apiHost + 'places/search/' + name)
+            .map(function (res) { return res.json(); });
+    };
+    GoogleService.prototype.getPhotosByReference = function (ref) {
+        return this._http.get(this.apiHost + 'places/search/photos/' + ref)
+            .map(function (res) { return res.json(); });
     };
     GoogleService = __decorate([
         core_1.Injectable(), 

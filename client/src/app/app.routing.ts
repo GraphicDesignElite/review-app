@@ -19,6 +19,10 @@ const appRoutes: Routes = [
         component: OneReviewComponent
     },
     {
+        path:'place/review/:id',
+        component: OneReviewComponent
+    },
+    {
         path:'search-results/:query',
         component: SearchResultsComponent
     },

@@ -6,21 +6,44 @@
     </div>
     
     <div class="row" *ngIf="searchResults">
-        <ng-container *ngFor="let result of searchResults.results">
-            <div class="search-results-display-panel col-md-6">
-               <div class="card">
-                <div class="card-block">
-                    <div class="row">
-                        <div class="col">
-
-                        </div>       
-                        <div class="col-10">
-                            x
+        <div class="col-8">
+            <ng-container *ngFor="let result of searchResults; let i = index;">
+                <div class="row">
+                    <div class="search-results-display-panel col">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col">
+                                             image                 
+                                    </div>       
+                                    <div class="col-7">
+                                        <h3 class="search-results-title">{{i+1}}. <a href="/place/review/{{result.id}}">{{result.name}}</a></h3>
+                                        <p class="search-results-address">{{result.formatted_address}}</p>
+                                        <div class="rating-container">
+                                            <rating-display rating="{{result.rating}}"></rating-display>
+                                        </div>    
+                                        <div class="tag-container">
+                                            <span class="tag" *ngFor="let tag of result.types">{{tag | cleanoutput}}</span>  
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        
+                                    </div>
+                                </div>
+                                <!-- tags -->
+                                <div class="row">
+                                     <div class="col">
+                                          base                  
+                                    </div>            
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                </div>
-            </div>
-        </ng-container>
+            </ng-container>
+        </div>
+        <div class="col">
+            sidebar
+        </div>
     </div>
 </div>

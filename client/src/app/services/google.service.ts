@@ -18,5 +18,9 @@ export class GoogleService{
         return this._http.get(this.apiHost + 'places/search/' + name)
         .map(res=>res.json());
     }
+    getPhotosByReference(ref:string){
+        return this._http.get(this.apiHost + 'places/search/photos/' + ref)
+        .map(res=>res.json());
+    }
     
 }

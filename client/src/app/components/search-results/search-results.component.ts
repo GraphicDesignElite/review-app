@@ -17,8 +17,11 @@ export class SearchResultsComponent implements OnInit{
        this._route.queryParams.subscribe(data => {
             let searchTerms = this.cleanInput(data['search']);
             this._googleservice.getPlaceByName(searchTerms).subscribe(searchResults =>{
-            this.searchResults = JSON.parse(searchResults);
-            console.log(this.searchResults);
+                this.searchResults = JSON.parse(searchResults); // parse results
+                this.searchResults = this.searchResults.results; // clean results
+                console.log(this.searchResults); // remove
+                
+
             });
        });
     }

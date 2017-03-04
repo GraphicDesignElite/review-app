@@ -14,6 +14,10 @@ var appRoutes = [
         component: one_review_component_1.OneReviewComponent
     },
     {
+        path: 'place/review/:id',
+        component: one_review_component_1.OneReviewComponent
+    },
+    {
         path: 'search-results/:query',
         component: search_results_component_1.SearchResultsComponent
     },
