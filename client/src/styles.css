@@ -2,12 +2,29 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 200%;
 }
-/*Components*/
+/* Components */
 .application-panel{
   padding-top:30px;
 }
 .tag{
   font-size:11px; display:inline-block; padding:3px 5px; background:#efefef; margin-right:5px;
+}
+/* Ratings Display Component */
+.rating-display-component .fa{
+  font-size:20px;
+  color:orange;
+}
+.rating-star .fa{
+  display:none;
+}
+.rating-star.full .fa-star{
+  display:inline-block;
+}
+.rating-star.half .fa-star-half-o{
+  display:inline-block;
+}
+.rating-star.none .fa-star-o{
+  display:inline-block;
 }
 
 /*Utilities*/

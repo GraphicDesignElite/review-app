@@ -14,9 +14,9 @@
                             <div class="card-block">
                                 <div class="row">
                                     <div class="col">
-                                             image                 
+                                          x            
                                     </div>       
-                                    <div class="col-7">
+                                    <div class="col-9">
                                         <h3 class="search-results-title">{{i+1}}. <a href="/place/review/{{result.id}}">{{result.name}}</a></h3>
                                         <p class="search-results-address">{{result.formatted_address}}</p>
                                         <div class="rating-container">
@@ -25,9 +25,6 @@
                                         <div class="tag-container">
                                             <span class="tag" *ngFor="let tag of result.types">{{tag | cleanoutput}}</span>  
                                         </div>
-                                    </div>
-                                    <div class="col-3">
-                                        
                                     </div>
                                 </div>
                                 <!-- tags -->

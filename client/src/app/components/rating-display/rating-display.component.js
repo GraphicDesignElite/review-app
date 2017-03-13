@@ -11,8 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var RatingDisplayComponent = (function () {
     function RatingDisplayComponent() {
+        this.maxScore = Array(5).fill(4);
     }
     RatingDisplayComponent.prototype.ngOnInit = function () {
+    };
+    RatingDisplayComponent.prototype.displayStar = function (x) {
+        if (parseInt(this.rating) > parseInt(x)) {
+            return 'full';
+        }
+        else if (parseInt(this.rating) < parseInt(x) &&
+            parseInt(this.rating) > (parseInt(x) - 1)) {
+            return 'half';
+        }
+        else {
+            return 'none';
+        }
     };
     __decorate([
         core_1.Input(), 
